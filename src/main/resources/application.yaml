@@ -1,0 +1,16 @@
+server:
+  error:
+    path: /error
+    whitelabel:
+      enabled: false
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+    show-sql: true
+  datasource:
+    password: postgrespw
+    username: postgres
+    url: jdbc:postgresql://localhost:49153/krohabd
