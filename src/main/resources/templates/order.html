@@ -1,7 +1,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>My Spring Boot App</title>
+    <title>Kroha</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/webjars/bootstrap/5.2.0/css/bootstrap.min.css"/>
@@ -11,7 +11,52 @@
 
 <body>
 <style>
-h1 {
+ body {
+     background: url('https://downloader.disk.yandex.ru/preview/965b925400aa11f3a508e93a8928eddc04ef45f3bf7ce191bdd4fe983bd07d30/64e22cda/TsmurVyB1-Xt_W2qTBC__7Ni7r8s4lyRwmPBgx9lB4piEogjkrIGAENdV3HlsbFpSD5xqWP8dIonhuoC30GbpQ%3D%3D?uid=0&filename=IMG_2637.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1920x937') no-repeat;
+       -moz-background-size: cover;
+       -webkit-background-size: cover;
+       -o-background-size: cover;
+       background-attachment: fixed;
+       background-size: cover;
+}
+
+    .navbar-logo {
+       width: 50px;
+       height: 50px;
+       margin-right: 10px;
+}
+
+    .logo {
+        font-size: 40px;
+        color: white;
+        font-family: "Luminari", fantasy;
+        margin-left: 50px;
+        margin-right: 150px;
+        margin-top: -20px;
+}
+    .nav {
+        font-size: 25px;
+        color: white;
+        font-family: "Luminari", fantasy;
+        margin-left: 100px;
+
+}
+    .navbar a:hover {
+        color: ffdb58;
+}
+    .navMe {
+        font-size: 25px;
+        color: ffdb58;
+        font-family: "Luminari", fantasy;
+        margin-left: 100px;
+}
+    .inst{
+        margin-left: 300px;
+}
+      text-align: center;
+      color: #333;
+}
+    h1 {
       text-align: center;
       color: #333;
     }
@@ -54,18 +99,31 @@ h1 {
  </style>
 
 <body>
+<div class="navbar">
+    <div class="navbar">
+        <a href="/" class="logo">Kroha</a>
+        <a href="portfolio" class="nav">Мои работы</a>
+        <a href="aboutMe" class="nav">Обо мне</a>
+        <a href="#" class="navMe">Как заказать</a>
+        <a href="#" class="nav">Доставка</a>
+        <a href="https://www.instagram.com/kroha.by/" class="nav">
+            <img class="photo inst"
+                 src="https://phonoteka.org/uploads/posts/2021-04/1619706208_16-phonoteka_org-p-znachok-instagram-bez-fona-dlya-fotoshopa-16.png"
+                 alt="logo inst" width="40px" height="40px">
+        </a>
+    </div>
+
+</div>
+
 <h1>Форма заявки</h1>
-
-<form action="submit.php" method="POST">
+<form action="/submit" method="post" th:object="${applicationForm}">
     <label for="name">Имя:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="phone">Номер телефона:</label>
-    <input type="tel" id="phone" name="phone" required>
-
-    <label for="additional">Дополнительное поле:</label>
-    <input type="text" id="additional" name="additional">
-
-    <button type="submit">Оставить заявку</button>
+    <input type="text" id="name" name="name" required><br>
+    <label for="phone">Телефон:</label>
+    <input type="text" id="phone" name="phone" required><br>
+    <label for="additionalInfo">Дополнительная информация:</label><br>
+    <textarea id="additionalInfo" name="additionalInfo"></textarea><br>
+    <button type="submit">Отправить</button>
 </form>
 </body>
+

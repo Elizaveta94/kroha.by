@@ -25,8 +25,8 @@ public class MainController {
     public String portfolio(Principal principal, Model model) {
         return "portfolio";
     }
-    @GetMapping("/order")
-    public String order(Principal principal, Model model) {
-        return "order";
-    }
+//    @GetMapping("/order")
+//    public String order(Principal principal, Model model) {
+//        return "order";
+//    }
 }

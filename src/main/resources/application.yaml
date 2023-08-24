@@ -14,3 +14,14 @@ spring:
     password: postgrespw
     username: postgres
     url: jdbc:postgresql://localhost:49153/krohabd
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username:
+    password:
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+
+app:
+  recipientEmail:
