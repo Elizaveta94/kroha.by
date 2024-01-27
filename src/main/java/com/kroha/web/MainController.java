@@ -14,7 +14,6 @@ public class MainController {
 
     @GetMapping("/mainPage")
     public String mainPage(Principal principal, Model model) {
-        String name = principal.getName();
         return "mainPage";
     }
 

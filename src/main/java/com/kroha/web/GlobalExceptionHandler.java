@@ -11,9 +11,9 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public String handleValidationException(Exception ex, Model model) {
-        model.addAttribute("validationError", ex.getMessage());
-        return "validationError";
+    public String handleException(Exception ex, Model model) {
+        model.addAttribute("exception", ex.getMessage());
+        return "error";
     }
 }
 
