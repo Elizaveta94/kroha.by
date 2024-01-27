@@ -2,7 +2,6 @@ package com.kroha.web;
 
 import com.kroha.domain.ApplicationDto;
 import com.kroha.service.EmailService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -32,7 +31,7 @@ public class ApplicationController {
     @PostMapping("/submit")
     public String submitForm(@ModelAttribute("applicationForm") ApplicationDto applicationForm) {
         sendEmail(applicationForm);
-        return "redirect:/confirmation";
+        return "confirmation";
     }
 
     private void sendEmail(ApplicationDto applicationForm) {
@@ -40,6 +39,6 @@ public class ApplicationController {
         String text = "Имя: " + applicationForm.getName() + "\nТелефон: " + applicationForm.getPhoneNumber()
                 + "\nДополнительная информация: " + applicationForm.getAdditionalInfo();
 
-        emailService.sendEmail(recipientEmail, subject, text);
+        emailService.sendEmail(recipientEmail, subject, text, applicationForm);
     }
 }

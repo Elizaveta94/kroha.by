@@ -1,16 +1,19 @@
 package com.kroha.domain;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
 @Data
 @Builder
 @NoArgsConstructor
+@AllArgsConstructor
+
 public class ApplicationDto {
     private String name;
     private String phoneNumber;
     private String additionalInfo;
-
 
 }
 

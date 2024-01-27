@@ -11,184 +11,114 @@
 <body>
 <style>
     body {
-        background: url('https://downloader.disk.yandex.ru/preview/23ddeab8038fddfe943288702a4d862f1983f7d43f7f77b98d7f9cc7f11b12ee/64ced1cd/-Cxb69Fg9j-6Oaf2YlWchSaClGZxTVhNB528o4qcDziZ86c1eFlmqtarbu7BVLOnrX5WPE4xvkdvikdb6w3prA%3D%3D?uid=0&filename=IMG_2181.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1920x937') no-repeat;
-        -moz-background-size: cover;
+        background: url('/images/main.jpg') no-repeat;
+        background-size: contain;
         -webkit-background-size: cover;
         -o-background-size: cover;
         background-attachment: fixed;
-        background-size: cover;
+        background-position: center;
     }
-
-   .navbar-logo {
-       width: 50px;
-       height: 50px;
-       margin-right: 10px;
-}
 
     .logo {
-        font-size: 40px;
-        color: white;
-        font-family: "Luminari", fantasy;
-        margin-left: 50px;
-        margin-right: 150px;
-         margin-top: -20px;
-}
-    .container {
+       width: 150px;
+       height: 20px;
+       margin-top: 30px;
+       left: 100px;
+       font-family: Georgia, serif;
+       font-weight: 700;
        text-align: center;
-       margin-top: 50px;
-       font-family: "Arial", sans-serif;
-       color: white;
-       position: relative;
-       top: 170px;
-       left: 300px;
-    }
+       color: #192D3C;
+       font-size: 32px;
+       margin-right: auto;
+       margin-left: 80px;
+       margin-top: 20px;
+}
+
+    .container {
+      font-family: Georgia, serif;
+      color: white;
+      position: relative;
+      top: 14
+      0px;
+      margin-left: 20px;
+}
 
     .button {
-      padding: 10px 20px;
-      background-color: #FEB8C8;
-      color: white;
+      margin-top: 30px;
+      margin-right: auto;
+      margin-left: 80px;
+      background-color: #5E9E91;
+      color: #000000;
       border: none;
-      border-radius: 4px;
       font-size: 20px;
-      text-decoration: none;
+      font-family: Georgia, serif;
       cursor: pointer;
-    }
+      width: 300px;
+      height: 80px;
+      padding: 0 25px;
+      border-radius: 50px;
+      box-shadow: -6px -6px 12px 0px #51311973 inset, 6px 6px 8px 0px #3D8778 inset;
+}
+
+    .text-big {
+      width: 990px;
+      height: 155px;
+      font-family: cursive;
+      margin-right: auto;
+      margin-left: 80px;
+      color: #4A2A12;
+      font-size: 64px;
+      margin-top: 80px;
+}
 
     .text-small {
-    font-size: 25px;
-    }
+      width: 900px;
+      height: 110px;
+      font-family: cursive;
+      margin-right: auto;
+      margin-left: 80px;
+      color: #000000;
+      font-size: 24px;
+      margin-top: 40px;
+}
 
     .nav {
-        font-size: 25px;
-        color: white;
-        font-family: "Luminari", fantasy;
-        margin-left: 100px;
-}
-
-    .arrow {
-      width: 100px;
-      height: 50px;
-      position: relative;
-      animation: arrow-animation 2s infinite;
-}
-
-    .arrow::before {
-      content: "";
-      position: absolute;
-      top: 20px;
-      left: 300px;
-      width: 150px;
-      height: 2px;
-      background-image: linear-gradient(to right, white 50%, transparent 50%);
-      background-size: 10px 2px;
-      background-position: 0;
-      background-repeat: repeat;
-      animation: dash-animation 1s infinite;
-      transform: rotate(-45deg);
-      transform-origin: top left;
-    }
-
-    .arrow::after {
-      content: "";
-      position: absolute;
-      top: -85px;
-      left: 400px;
-      right: 0;
-      width: 0;
-      height: 0;
-      border-left: 10px solid white;
-      border-top: 5px solid transparent;
-      border-bottom: 5px solid transparent;
-      transform: translateY(-50%);
-      animation: slide-animation 1s infinite;
-      transform: rotate(-45deg);
-      transform-origin: top left;
-
-}
-
-    @keyframes dash-animation {
-      0% { background-position: 0; }
-      100% { background-position: 20px; }
-}
-
-    @keyframes arrow-animation {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(100px); }
-}
-
-    @keyframes slide-animation {
-      0% { right: -10px; }
-      100% { right: 0; }
-}
-    .containerTwo {
+        font-family: Georgia, serif;
+        font-weight: 400;
+        line-height: 25px;
         text-align: center;
-        margin-top: 0px;
-        font-family: "Arial", sans-serif;
-        color: white;
-        margin-left: -1200px;
-        font-weight: normal;
-}
-    .text-animationTwo {
-        opacity: 0;
-        animation-name: fadeIn;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-        margin-left: 10px;
-        animation-delay: 0.5s;
-}
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-}
-    .arrow-animationTwo {
-        opacity: 0;
-        animation-name: fadeIn;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-        margin-left: 10px;
-        animation-delay: 2s;
-}
-    .navbar a:hover {
-        color: ffdb58;
-}
-    .inst{
+        color: #000000;
+        width: 979px;
+        height: 27px;
+        margin-top: 20px;
+        font-size: 20px;
+        margin-right: auto;
         margin-left: 300px;
+        margin-top: 20px;
 }
 
+    .nav a {
+       margin-right: 90px;
+    }
 </style>
 
 <body>
-    <div class="navbar">
-        <div class="navbar">
-            <a href="/" class="logo">Kroha</a>
-            <a href="portfolio" class="nav">Мои работы</a>
-            <a href="aboutMe" class="nav">Обо мне</a>
-            <a href="order" class="nav">Как заказать</a>
-            <a href="#" class="nav">Доставка</a>
-            <a href="https://www.instagram.com/kroha.by/" class="nav">
-                <img class="photo inst"
-                     src="https://phonoteka.org/uploads/posts/2021-04/1619706208_16-phonoteka_org-p-znachok-instagram-bez-fona-dlya-fotoshopa-16.png"
-                     alt="logo inst" width="40px" height="40px">
-            </a>
-        </div>
-
+<div class="navbar">
+    <h3 class="logo" onclick="document.location='mainPage'">Kroha.by</h3>
+    <div class ="nav">
+        <a onclick="document.location='mainPage'">Главная</a>
+        <a onclick="document.location='aboutMe'">Обо мне</a>
+        <a onclick="document.location='stages'">Этапы работы</a>
+        <a onclick="document.location='portfolio'">Мои работы</a>
+        <a onclick="document.location='order'">Как заказать</a>
     </div>
-
-<div class="container">
-    <h1 class="text-small">Привет! Я Оля. <br> И я создаю вязаные изделия ручной работы.</h1>
-    <button class="button" onclick="document.location='aboutMe'">Обо мне</button>
 </div>
 
-
-<div class="arrow arrow-animationTwo"></div>
-
-<div class="containerTwo">
-    <h1 class="text-small text-animationTwo"> Окунись в нежный плюшевый мир. <br>
-    </h1>
+<div class="container">
+    <h1 class="text-big">Вязаные пледы, игрушки, платья ручной работы</h1>
+    <h3 class="text-small">Я Оля. Вязание - мое любимое хобби. Поэтому здесь я мечтаю и вяжу в удовольствие.
+        Здесь вы можете приобрести мягкие пушистые пледы, игрушки из гипоалергенной пряжи, платья для маленьких принцесс</h3>
+    <button class="button" onclick="document.location='order'">Связаться со мной</button>
 </div>
 
 

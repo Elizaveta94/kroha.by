@@ -1,0 +1,260 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Kroha</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/webjars/bootstrap/5.2.0/css/bootstrap.min.css"/>
+    <script src="/webjars/bootstrap/5.2.0/js/bootstrap.bundle.js"></script>
+
+    <script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
+
+<body>
+<style>
+
+body {
+        background: url('/images/stages.jpg') no-repeat;
+        background-size: contain;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    .logo {
+       width: 150px;
+       height: 30px;
+       font-family: Georgia, serif;
+       font-weight: 700;
+       text-align: center;
+       color: #192D3C;
+       font-size: 32px;
+       margin-right: auto;
+       margin-left: 80px;
+       margin-top: 20px;
+}
+
+    .nav {
+        font-family: Georgia, serif;
+        font-weight: 400;
+        line-height: 25px;
+        text-align: center;
+        color: #000000;
+        width: 979px;
+        height: 27px;
+        margin-top: 20px;
+        font-size: 20px;
+        margin-right: auto;
+        margin-left: 300px;
+        margin-top: 20px;
+
+}
+
+    .navbar a:hover {
+        color: ffdb58;
+}
+
+
+    .line {
+        width: 1920px;
+        margin-top: 25px;
+        border: 1px solid #000000;
+}
+    .footer{
+        width: 1920px;
+        height: 110px;
+        margin-top: -7px;
+        background: #E2D2C6;
+        background-size: contain;
+
+}
+    .inst{
+        width: 35px;
+        height: 35px;
+        margin-left: 1700px;
+        margin-top: 42px;
+}
+    .logoFooter {
+       font-family: Georgia, serif;
+       font-weight: 700;
+       text-align: center;
+       color: #192D3C;
+       font-size: 20px;
+       margin-right: auto;
+       margin-top: -65px;
+}
+
+    .nav a {
+       margin-right: 90px;
+    }
+
+    .text-big {
+        width: 500px;
+        height: 55px;
+        font-family: cursive;
+        margin-right: auto;
+        margin-left: 80px;
+        margin-top: 60px;
+        color:  #4A2A12;
+        font-size: 48px;
+}
+
+    .text-small {
+    font-family: cursive;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+    width: 650px;
+    height: 80px;
+    gap: 50px;
+  }
+
+  .text-number {
+    color: #0000004D;
+    font-size: 130px;
+    font-family: cursive;
+    width: 147px;
+    height: 240px;
+    margin-right: 50px;
+    margin-top: 50px;
+  }
+
+  .text-numberTwo {
+    color: #0000004D;
+    font-size: 130px;
+    font-family: cursive;
+    width: 147px;
+    height: 240px;
+    margin-left: 850px;
+    margin-top: -850px;
+  }
+
+  .text-numberThree {
+    color: #0000004D;
+    font-size: 130px;
+    font-family: cursive;
+    width: 147px;
+    height: 240px;
+    margin-left: 850px;
+    margin-top: -240px;
+  }
+
+  .text {
+    font-family: cursive;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+    width: 550px;
+    height: 43px;
+    margin-top: -100px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .textTwo {
+    font-family: cursive;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+    width: 683px;
+    height: 43px;
+    margin-top: -565px;
+  }
+
+  .textThree {
+    font-family: cursive;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+    width: 683px;
+    height: 43px;
+    margin-top: -240px;
+  }
+
+  .bigContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: -450px;
+  }
+
+</style>
+</style>
+
+<div class="navbar">
+    <h3 class="logo" onclick="document.location='mainPage'">Kroha.by</h3>
+    <div class ="nav">
+        <a onclick="document.location='mainPage'">Главная</a>
+        <a onclick="document.location='aboutMe'">Обо мне</a>
+        <a onclick="document.location='stages'">Этапы работы</a>
+        <a onclick="document.location='portfolio'">Мои работы</a>
+        <a onclick="document.location='order'">Как заказать</a>
+    </div>
+</div>
+
+<div class="line"></div>
+
+<h2 class="text-big">Этапы работы</h2>
+
+<div class="bigContainer">
+
+    <div class="container">
+        <h1 class="text-number">01</h1>
+        <div>
+            <h2 class="text" style="margin-left: -50; margin-top:-50;">Знакомство</h2>
+            <h3 class="text-small" style="margin-left:-50">Мне важно узнать Ваши предпочтения, чтобы учесть все детали.</h3>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="text-number">03</h1>
+        <div>
+            <h2 class="text" style="margin-left: -50;  margin-top:-50;">Сроки готовности</h2>
+            <h3 class="text-small" style="margin-left:-50;">Готовность изделия до 7 дней.</h3>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="text-numberTwo">02</h1>
+        <div>
+            <h2 class="textTwo" style= "margin-left: 20; margin-top: -540;">Концепция</h2>
+            <h3 class="text-small" style="margin-left: 20">Мы обговорим с Вами все ключевые детали заказа. Я дам Вам все необходимые рекомендации по составу и цвету изделия.</h3>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="text-numberThree">04</h1>
+        <div>
+            <h2 class="textThree" style="margin-left: 20; margin-top: -245">Оплата</h2>
+            <h3 class="text-small" style="margin-left: 20">Внесение предоплаты любым для вас способом.</h3>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <a href="https://www.instagram.com/kroha.by/">
+        <img class="inst" src="/images/inst.png" alt="inst">
+    </a>
+</div>
+
+<h3 class="logoFooter">Kroha.by</h3>
+
+</body>
+

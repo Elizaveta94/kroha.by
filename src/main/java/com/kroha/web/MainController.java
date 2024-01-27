@@ -12,8 +12,9 @@ import java.security.Principal;
 @RequiredArgsConstructor
 public class MainController {
 
-    @GetMapping("/")
+    @GetMapping("/mainPage")
     public String mainPage(Principal principal, Model model) {
+        String name = principal.getName();
         return "mainPage";
     }
 
@@ -25,8 +26,8 @@ public class MainController {
     public String portfolio(Principal principal, Model model) {
         return "portfolio";
     }
-//    @GetMapping("/order")
-//    public String order(Principal principal, Model model) {
-//        return "order";
-//    }
+    @GetMapping("/stages")
+    public String stage(Principal principal, Model model) {
+        return "stagesOfWork";
+    }
 }

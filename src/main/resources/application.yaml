@@ -17,11 +17,15 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username:
-    password:
+    username: ${MAIL_SENDER}
+    password: ${MAIL_SENDER_PASSWORD}
     properties:
       mail.smtp.auth: true
       mail.smtp.starttls.enable: true
 
 app:
-  recipientEmail:
+  recipientEmail: ${MAIL_RECIPIENT}
+
+admin:
+  userName: ${ROPOT_NAME}
+  password: ${ROPOT_PASSWORD}

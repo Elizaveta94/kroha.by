@@ -1,245 +1,127 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Мои работы/</title>
+    <title>Обо мне</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/webjars/bootstrap/5.2.0/css/bootstrap.min.css"/>
     <script src="/webjars/bootstrap/5.2.0/js/bootstrap.bundle.js"></script>
 
     <script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-    <script>
-     $(document).ready(function(){
-          $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:true,
-            autoplay: true,
-            autoplayTimeout: 2000,
-            responsive:{
-              0:{
-                items:1
-              },
-              600:{
-                items:3
-              },
-              1000:{
-                items:5
-              }
-            }
-          })
-        });
-        </script>
 <body>
 <style>
-    body {
-        background: url('https://downloader.disk.yandex.ru/preview/8cce65e99cbaf5099192020692772662f9717c1e11347d5014c6bdf53e99efd6/64e3cecb/CaRXLl8hG7FofUmm4Q5deg2c6oJ6pEO8bL41oz1t-cZZbEbWajW5lRlbyAugLAugYnXBdrPIUxzFNuvcL7O4KA%3D%3D?uid=0&filename=IMG_2505.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1920x937') no-repeat;
-        -moz-background-size: cover;
-        -webkit-background-size: cover;
-        -o-background-size: cover;
-        background-attachment: fixed;
-        background-size: cover;
-    }
 
-   .navbar-logo {
-       width: 50px;
-       height: 50px;
-       margin-right: 10px;
+body {
+     background: #FFF7F1 no-repeat;
+       -moz-background-size: cover;
+       -webkit-background-size: cover;
+       -o-background-size: cover;
+       background-attachment: fixed;
+       background-size: contain;
 }
 
     .logo {
-        font-size: 40px;
-        color: white;
-        font-family: "Luminari", fantasy;
-        margin-left: 50px;
-        margin-right: 150px;
-         margin-top: -20px;
+       width: 150px;
+       height: 30px;
+       font-family: Georgia, serif;
+       font-weight: 700;
+       text-align: center;
+       color: #192D3C;
+       font-size: 32px;
+       margin-right: auto;
+       margin-left: 80px;
+       margin-top: 20px;
 }
 
     .nav {
-        font-size: 25px;
-        color: white;
-        font-family: "Luminari", fantasy;
-        margin-left: 100px;
+        font-family: Georgia, serif;
+        font-weight: 400;
+        line-height: 25px;
+        text-align: center;
+        color: #000000;
+        width: 979px;
+        height: 27px;
+        margin-top: 20px;
+        font-size: 20px;
+        margin-right: auto;
+        margin-left: 300px;
+        margin-top: 20px;
+
 }
 
     .navbar a:hover {
         color: ffdb58;
 }
+
+    .text-big {
+        width: 205px;
+        height: 55px;
+        font-family: cursive;
+        margin-right: auto;
+        margin-left: 900px;
+        margin-top: -500px;
+        color:  #000000;
+        font-size: 48px;
+}
+    .line {
+        width: 1920px;
+        margin-top: 25px;
+        border: 1px solid #000000;
+}
+    .footer{
+        width: 1920px;
+        height: 110px;
+        margin-top: 1200px;
+        background: #E2D2C6;
+
+}
     .inst{
-        margin-left: 300px;
+        width: 35px;
+        height: 35px;
+        margin-left: 1700px;
+        margin-top: 42px;
 }
-    .navMe {
-        font-size: 25px;
-        color: ffdb58;
-        font-family: "Luminari", fantasy;
-        margin-left: 100px;
+    .logoFooter {
+       font-family: Georgia, serif;
+       font-weight: 700;
+       text-align: center;
+       color: #192D3C;
+       font-size: 20px;
+       margin-right: auto;
+       margin-top: -65px;
 }
-    .tel{
-        margin-left: 80px;
-}
-    .text-small {
-        font-size: 20px;
-}
-    .text-animation {
-        opacity: 0;
-        animation-name: fadeIn;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-        margin-left: 10px;
-        animation-delay: 0.5s;
-}
-    .container {
-        text-align: left;
-        margin-top: 50px;
-        font-family: "Arial", sans-serif;
-        color: white;
-        margin-left: 50px;
-        font-weight: normal;
-}
-    .containerTwo {
-        text-align: left;
-        margin-top: 0px;
-        font-family: "Arial", sans-serif;
-        color: white;
-        margin-left: 50px;
-        font-weight: normal;
-}
-    .text-animationTwo {
-        opacity: 0;
-        animation-name: fadeIn;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-        margin-left: 10px;
-        animation-delay: 1s;
-}
-    .containerThree {
-        text-align: left;
-        margin-top: 0px;
-        font-family: "Arial", sans-serif;
-        color: white;
-        margin-left: 50px;
-        font-weight: normal;
-}
-    .text-animationThree {
-        opacity: 0;
-        animation-name: fadeIn;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
-        margin-left: 10px;
-        animation-delay: 1.5s;
-}
-    .containerFour {
-        text-align: left;
-        margin-top: 0px;
-        font-family: "Arial", sans-serif;
-        color: white;
-        margin-left: 50px;
-        font-weight: normal;
-}
-    .text-animationFour {
-        opacity: 0;
-        animation-name: fadeIn;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
-        margin-left: 10px;
-        animation-delay: 2s;
-}
-    .containerFive {
-        text-align: left;
-        margin-top: 0px;
-        font-family: "Arial", sans-serif;
-        color: white;
-        margin-left: 50px;
-        font-weight: normal;
-        background-size: 100% 100%;
 
+    .nav a {
+       margin-right: 90px;
     }
-    .text-animationFive {
-        opacity: 0;
-        animation-name: fadeIn;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
-        margin-left: 10px;
-        animation-delay: 2.5s;
-
-}
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-}
-     .containerTwo,
-     .container,
-     .containerThree,
-     .containerFour,
-     .containerFive {
-         width: 60%;
-}
 
 </style>
 
-<body>
 <div class="navbar">
-    <div class="navbar">
-        <a href="/" class="logo">Kroha</a>
-        <a href="portfolio" class="navMe">Мои работы</a>
-        <a href="aboutMe" class="nav">Обо мне</a>
-        <a href="/order" class="nav">Как заказать</a>
-        <a href="#" class="nav">Доставка</a>
-        <a href="https://www.instagram.com/kroha.by/" class="nav">
-            <img class="instagram"
-                 src="https://phonoteka.org/uploads/posts/2021-04/1619706208_16-phonoteka_org-p-znachok-instagram-bez-fona-dlya-fotoshopa-16.png"
-                 alt="logo inst" width="40px" height="40px">
-        </a>
+    <h3 class="logo" onclick="document.location='mainPage'">Kroha.by</h3>
+    <div class ="nav">
+        <a onclick="document.location='mainPage'">Главная</a>
+        <a onclick="document.location='aboutMe'">Обо мне</a>
+        <a onclick="document.location='stages'">Этапы работы</a>
+        <a onclick="document.location='portfolio'">Мои работы</a>
+        <a onclick="document.location='order'">Как заказать</a>
     </div>
-
 </div>
 
-<div class="owl-carousel">
-    <div><img src="https://downloader.disk.yandex.ru/preview/f245a78edb245f3480c8341e812dc8c022414181ca3448d8bbf10a1714814971/64e22ce4/8c8wxQlkGxYkuWjb8Q3wncliuJg8HONSzF6la49iqg2rjU4-OONsZNuOEYJ_IBL6Uu9GBAT3lbOWZiZp1whNTA%3D%3D?uid=0&filename=IMG_2818.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1920x937"  alt="Фото 1"></div>
-    <div><img src="https://downloader.disk.yandex.ru/preview/9d2a2231019d4105fe912e1a4ecca095f83ecf8c0a4ad3b3bba91c74fb4ab37b/64e3cfb2/zSmiH-kmeAZvJVdFLiUA_LJu_vtJhk61qrf81ljUm9W10e8mSLRQsh3fpRCbKnQu30Hwd8iyopehTTF9eTazFw%3D%3D?uid=0&filename=IMG_2836.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1920x937"  alt="Фото 2"></div>
-    <div><img src="https://downloader.disk.yandex.ru/preview/53446e4be9d2410e458bf67f93b57f6311b94ec53aa2511860aff8ab366e65a4/64e3ceb1/ImkQPbq-xAODIoA_N8xJ2LrxNkH7xI_PgnTOfosp2Un6DTS3bUBJi7eufti7XZFVVX2-XMG_hxtmFnNQBVhOgw%3D%3D?uid=0&filename=IMG_2329.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1920x937"  alt="Фото 3"></div>
-    <div><img src="https://downloader.disk.yandex.ru/preview/81d32e3a6bd7b0480a9256fcf86c90baa6f98869a29dce18b57b9351567db49b/64e3ceb1/NsFx2OFVcGvk9UZ5pJPmeo0qFg6UucYuS5zxSnWzuGBCMk6EYTL0MDn3jMZkxDr1aCt6sZz9FIetWpFAVgSfkg%3D%3D?uid=0&filename=IMG_2332.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1920x937"  alt="Фото 4"></div>
-    <div><img src="https://downloader.disk.yandex.ru/preview/33449cb8195478a088f45c358730079a8db37017da5f5550351a66fab3d1da57/64e3ceb7/m20T43_r2jz5bYTs1NwigMLhrVgxYv4jas1bmYScK89lEochkxcz8AhmkH_C5JAm8etaz1ISjj0LUrprEzSXlw%3D%3D?uid=0&filename=IMG_2362.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1920x937"  alt="Фото 5"></div>
-    <div><img src="https://downloader.disk.yandex.ru/preview/eb49009fcf9895e1274ba6b2a9254451d2ffb567c8699093f716aae6c8fe799a/64e3ceb7/sYhV3AvDB7KHKe_6FgyJhZXB-CywD2-6K9MJOzzuvo4mpGLGRIeQrF3EdbPYMIpLQZGz9EExF-2z7lddNM9PFA%3D%3D?uid=0&filename=IMG_2432.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1920x937"  alt="Фото 6"></div>
-    <div><img src="https://downloader.disk.yandex.ru/preview/177e29d648810f92f77464f5bde3a85c7a2a5d8ed10143d2c7e5bc1b9b76a1de/64e3ceb1/B7gNNvdcIU_ejPvjbF9ysePHjssvLzGt8PU19H0rROvo62bl3h-uoa14uhNrGu_govvsj_g0utxQM9aZ43ZTXg%3D%3D?uid=0&filename=IMG_2309.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1920x937"  alt="Фото 7"></div>
-    <div><img src="https://downloader.disk.yandex.ru/preview/5c588565583ecd2b8121f47c1df83a3bcef772e5265262e3db9bce93bb2f9720/64e3ce9b/jNVdnOtwv0gL9UtKi-Dps1HiR3q6-FXiTYpZFxbw8mjvDrX1UYCWkpce3ZdOlrzm_cwIKdVISg1Tsau6sPRkZA%3D%3D?uid=0&filename=IMG_2290.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1920x937"  alt="Фото 8"></div>
-    <div><img src="https://downloader.disk.yandex.ru/preview/9c9664b070a217fc388dafe43e053b755a2f24e40ab6dba2fd7392cf396d6240/64e3ce8e/AXNT7Sqx2iDwV_hIBlFWdqVjrT-QH_PScb_9NxDGcvjujkp7A9I4IivAZ0AG5-jpIu7DIWnTkocY8CF4H4SOyw%3D%3D?uid=0&filename=IMG_2123.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1920x937"  alt="Фото 9"></div>
-    <div><img src="https://downloader.disk.yandex.ru/preview/ec3882afd7a50f06959b84409d6d9f8b66f34ec50ebb44eeed4571c6f498acd1/64e3ce8e/yKVeFGvMhYdzC5nPY6DTTd2qI9NqSWHO9JEP-t-ktxkx9Ht-44Bz9mbjQP_WFZO1SJ7qqVGE5iA-GXUj6WC-nw%3D%3D?uid=0&filename=IMG_2088.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1920x937"  alt="Фото 10"></div>
-    <div><img src="https://downloader.disk.yandex.ru/preview/c65b3a4957234858d0e6f1cb56bedc30374e44f042519d95b7824d814d28f33f/64e3ceff/5abH2hHOQLHaQUUt5FXHzRLgLSmID0jHsm7lzBZcYZdyTi0NtlbZOxbphOI6jkwSCK2nTDhbMmcOsWeQQmhbzQ%3D%3D?uid=0&filename=IMG_2521.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1920x937"  alt="Фото 11"></div>
-    <div><img src="https://downloader.disk.yandex.ru/preview/dd852dc87c2ba584f1eec053ab9af9a1a2dd18b5117801f26ca3939c44ff9129/64e3cf58/kxg3_xDPomaXk4iU8spk55T5RBNDkgM6u3hdiN53BYJWHuIm5sXz4pdWaaO_WdWFS1qPs3GLAFKHadrLlZHAdw%3D%3D?uid=0&filename=IMG_2655.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1920x937"  alt="Фото 12"></div>
-    <div><img src="https://downloader.disk.yandex.ru/preview/1a41ed542d6b6c152f5e63e8a5d8a3233d5d998ad50588528ab2a25595bfc4d3/64e3cf58/PQraX3QDOShYIvWZwU9QQb8d-WJju0uz6xh8EvnnQP4rTzYsOO6XyiSX6UY7dlYTS8ih7h8NM_Ceb7566Ssk0g%3D%3D?uid=0&filename=IMG_2627.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1920x937"  alt="Фото 13"></div>
-    <div><img src="https://downloader.disk.yandex.ru/preview/d64aed76ac5d6e5bd24d081f3c8104061fce274ea56ec1d600bf84840768446f/64e3cecb/d61it-MyDfpDPEMsMtJgRLxJ9ekM4Voa8Sg5nxMDxjGLZ_ifGYC1CaYyBvMOv6nAy-eNyNi0Br0i3HMU3c5mFQ%3D%3D?uid=0&filename=IMG_2476.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1920x937"  alt="Фото 14"></div>
+<div class="line"></div>
+
+
+<h1 class="text-big">Мои работы</h1>
+
+
+
+<div class="footer">
+    <a href="https://www.instagram.com/kroha.by/">
+        <img class="inst" src="/images/inst.png" alt="inst">
+    </a>
 </div>
-
-    <div class="container">
-        <h1 class="text-small text-animation"> В моем ассортименте вы найдете:
-            <br> - гиппоалергенные пледики. Они могут быть изготовлены в широкой цветовой гамме;
-        </h1>
-    </div>
-
-    <div class="containerTwo">
-        <h1 class="text-small text-animationTwo"> - мягкие игрушки,изготовлены из гипоаллергенной плюшевой пряжи, глазки и носик на надёжных креплениях;</h1>
-    </div>
-
-    <div class="containerThree">
-        <h1 class="text-small text-animationThree"> - вязаные куколки из гипоаллергенной пряжи, для которых найдется в сердце место как у детей, так у взрослых;</h1>
-    </div>
-
-    <div class="containerFour">
-        <h1 class="text-small text-animationFour"> - вязаные наряды для кукол-модниц;</h1>
-    </div>
-
-    <div class="containerFive">
-        <h1 class="text-small text-animationFive"> - вязаные платья для маленьких принцесс.</h1>
-    </div>
+<h3 class="logoFooter">Kroha.by</h3>
 
 </body>
+

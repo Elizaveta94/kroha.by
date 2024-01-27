@@ -1,11 +1,257 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Подтверждение</title>
-</head>
+    <title>Kroha</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/webjars/bootstrap/5.2.0/css/bootstrap.min.css"/>
+    <script src="/webjars/bootstrap/5.2.0/js/bootstrap.bundle.js"></script>
+
+    <script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
+
 <body>
-<h1>Заявка отправлена</h1>
-<p>Спасибо за заполнение заявки! Мы свяжемся с вами в ближайшее время.</p>
+<style>
+
+body {
+        background: url('/images/order.jpg') no-repeat;
+        background-size: contain;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    .logo {
+       width: 150px;
+       height: 30px;
+       font-family: Georgia, serif;
+       font-weight: 700;
+       text-align: center;
+       color: #192D3C;
+       font-size: 32px;
+       margin-right: auto;
+       margin-left: 80px;
+       margin-top: 20px;
+}
+
+    .nav {
+        font-family: Georgia, serif;
+        font-weight: 400;
+        line-height: 25px;
+        text-align: center;
+        color: #000000;
+        width: 979px;
+        height: 27px;
+        margin-top: 20px;
+        font-size: 20px;
+        margin-right: auto;
+        margin-left: 300px;
+        margin-top: 20px;
+
+}
+
+    .navbar a:hover {
+        color: ffdb58;
+}
+
+    .line {
+        width: 1920px;
+        margin-top: 25px;
+        border: 1px solid #000000;
+}
+    .footer{
+        width: 1920px;
+        height: 110px;
+        margin-top: 195px;
+        background: #E2D2C6;
+        background-size: contain;
+
+}
+    .inst{
+        width: 35px;
+        height: 35px;
+        margin-left: 1700px;
+        margin-top: 42px;
+}
+    .logoFooter {
+       font-family: Georgia, serif;
+       font-weight: 700;
+       text-align: center;
+       color: #192D3C;
+       font-size: 20px;
+       margin-right: auto;
+       margin-top: -65px;
+}
+
+    .nav a {
+       margin-right: 90px;
+    }
+
+    .form{
+       box-shadow: 0px 20px 50px 0px #4A2A1226;
+       box-shadow: 0px 5px 10px 0px #4A2A1214;
+       background: #FFFDFB99;
+       width: 500px;
+       height: 480px;
+       margin-top: 30px;
+       margin-left: 150px;
+       border-radius: 50px;
+
+}
+
+    .button {
+        margin-top: 20px;
+        margin-right: auto;
+        margin-left: 100px;
+        background-color: #5E9E91;
+        color: #000000;
+        border: none;
+        font-size: 20px;
+        font-family: Georgia, serif;
+        cursor: pointer;
+        width: 300px;
+        height: 50px;
+        padding: 0 25px;
+        border-radius: 50px;
+        box-shadow: -6px -6px 12px 0px #51311973 inset, 6px 6px 8px 0px #3D8778 inset;
+}
+
+    .text-big {
+        width: 800px;
+        height: 55px;
+        font-family: cursive;
+        margin-right: auto;
+        margin-left: 80px;
+        margin-top: 60px;
+        color:  #4A2A12;
+        font-size: 48px;
+}
+
+    label {
+        font-size: 20px;
+        color:  #000000;
+        width: 500px;
+        height: 22px;
+        font-family: Georgia, serif;
+        margin-top: 10px;
+        margin-left:50px;
+  }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+  }
+
+     input{
+        width:400px;
+        height: 50px;
+        padding: 9px, 20px, 9px, 20px;
+        border-radius: 6px;
+        border: 1.5px;
+        gap: 8px;
+        border: 1.5px solid #9C9C9C;
+        margin-top: 10px;
+        margin-left:50px;
+        background-color: transparent;
+  }
+
+     textarea{
+        width:400px;
+        height: 50px;
+        padding: 9px, 20px, 9px, 20px;
+        border-radius: 6px;
+        border: 1.5px;
+        gap: 8px;
+        border: 1.5px solid #9C9C9C;
+        margin-top: -10px;
+        margin-left:50px;
+        background-color: transparent;
+  }
+    .text-small{
+        font-family: cursive;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: left;
+        color:  #000000;
+        width: 500px;
+        height: 146px;
+        margin-top: -450px;
+        margin-left: 1250px;
+        gap: 50px;
+  }
+    .container{
+        margin-top: 500px;
+        margin-left: 1250px;
+  }
+
+  .direct{
+        width: 35px;
+        height: 35px;
+        margin-left: 1340px;
+        margin-top: -100px;
+}
+    .form-group input::placeholder {
+       color: #9C9C9C;
+        font-size: 22px;
+        font-weight: 500px;
+        line-height: 22px;
+        letter-spacing: 0.25px;
+        text-align: left;
+        font-family: cursive;
+  }
+
+</style>
+</style>
+
+<div class="navbar">
+    <h3 class="logo" onclick="document.location='mainPage'">Kroha.by</h3>
+    <div class ="nav">
+        <a onclick="document.location='mainPage'">Главная</a>
+        <a onclick="document.location='aboutMe'">Обо мне</a>
+        <a onclick="document.location='stages'">Этапы работы</a>
+        <a onclick="document.location='portfolio'">Мои работы</a>
+        <a onclick="document.location='order'">Как заказать</a>
+    </div>
+</div>
+
+<div class="line"></div>
+
+<h1 class="text-big">Спасибо.Ваша заявка отправлена!</h1>
+<div class="form">
+
+    <form action="/submit" method="post" th:object="${applicationForm}">
+        <div class="form-group">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" required placeholder="Ваше имя"><br>
+            <label for="phoneNumber">Номер телефона</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" required placeholder="375 (_ _)_ _ _ _ _ _ "><br>
+            <label for="additionalInfo">Дополнительная информация</label><br>
+            <textarea id="additionalInfo" name="additionalInfo"></textarea><br>
+            <button class ="button" type="submit">Отправить</button>
+        </div>
+    </form>
+</div>
+
+<h3 class="text-small">Я свяжусь с Вами в течении 24 часов  и отвечу на все Ваши вопросы.</h3>
+
+<div class ="container"></div>
+<h3 class="text-small">Написать в direct.</h3>
+<a href="https://www.instagram.com/kroha.by/">
+    <img class="direct" src="/images/inst.png" alt="inst">
+</a>
+</div>
+
+<div class="footer">
+    <a href="https://www.instagram.com/kroha.by/">
+        <img class="inst" src="/images/inst.png" alt="inst">
+    </a>
+</div>
+
+<h3 class="logoFooter">Kroha.by</h3>
+
 </body>
-</html>
+
