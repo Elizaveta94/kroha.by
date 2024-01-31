@@ -9,10 +9,10 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-
-public class ApplicationDto {
-    private String name;
-    private String phoneNumber;
-    private String additionalInfo;
-
+public class ProductDto {
+    private Long id;
+    private String title;
+    private String description;
+    private Integer cost;
+    private Byte photo;
 }
