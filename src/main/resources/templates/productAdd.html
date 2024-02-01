@@ -1,0 +1,227 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Обо мне</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/webjars/bootstrap/5.2.0/css/bootstrap.min.css"/>
+    <script src="/webjars/bootstrap/5.2.0/js/bootstrap.bundle.js"></script>
+
+    <script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
+
+<body>
+<style>
+
+body {
+     background: #FFF7F1 no-repeat;
+       -moz-background-size: cover;
+       -webkit-background-size: cover;
+       -o-background-size: cover;
+       background-attachment: fixed;
+       background-size: contain;
+}
+
+    .logo {
+       width: 150px;
+       height: 30px;
+       font-family: Georgia, serif;
+       font-weight: 700;
+       text-align: center;
+       color: #192D3C;
+       font-size: 32px;
+       margin-right: auto;
+       margin-left: 80px;
+       margin-top: 20px;
+}
+
+    .nav {
+        font-family: Georgia, serif;
+        font-weight: 400;
+        line-height: 25px;
+        text-align: center;
+        color: #000000;
+        width: 979px;
+        height: 27px;
+        margin-top: 20px;
+        font-size: 20px;
+        margin-right: auto;
+        margin-left: 300px;
+        margin-top: 20px;
+
+}
+
+    .navbar a:hover {
+        color: ffdb58;
+}
+
+    .text-big {
+        width: 205px;
+        height: 55px;
+        font-family: cursive;
+        margin-right: auto;
+        margin-left: 900px;
+        margin-top: -500px;
+        color:  #000000;
+        font-size: 48px;
+}
+    .line {
+        width: 1920px;
+        margin-top: 25px;
+        border: 1px solid #000000;
+}
+    .footer{
+        width: 1920px;
+        height: 110px;
+        margin-top: 1200px;
+        background: #E2D2C6;
+
+}
+    .inst{
+        width: 35px;
+        height: 35px;
+        margin-left: 1700px;
+        margin-top: 42px;
+}
+    .logoFooter {
+       font-family: Georgia, serif;
+       font-weight: 700;
+       text-align: center;
+       color: #192D3C;
+       font-size: 20px;
+       margin-right: auto;
+       margin-top: -65px;
+}
+
+    .nav a {
+       margin-right: 90px;
+    }
+
+    .form{
+       box-shadow: 0px 20px 50px 0px #4A2A1226;
+       box-shadow: 0px 5px 10px 0px #4A2A1214;
+       background: #FFFDFB99;
+       width: 500px;
+       height: 400px;
+       margin-top: 100px;
+       margin-left: 700px;
+       border-radius: 50px;
+
+}
+
+    .button {
+        margin-top: 40px;
+        margin-right: auto;
+        margin-left: 100px;
+        background-color: #5E9E91;
+        color: #000000;
+        border: none;
+        font-size: 20px;
+        font-family: Georgia, serif;
+        cursor: pointer;
+        width: 300px;
+        height: 50px;
+        padding: 0 25px;
+        border-radius: 50px;
+        box-shadow: -6px -6px 12px 0px #51311973 inset, 6px 6px 8px 0px #3D8778 inset;
+}
+
+    label {
+        font-size: 20px;
+        color:  #000000;
+        width: 500px;
+        height: 22px;
+        font-family: Georgia, serif;
+        margin-top: 30px;
+        margin-left: 80px;
+  }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+  }
+
+     input{
+        width:400px;
+        height: 50px;
+        padding: 9px, 20px, 9px, 20px;
+        border-radius: 6px;
+        border: 1.5px;
+        gap: 8px;
+        border: 1.5px solid #9C9C9C;
+        margin-top: 10px;
+        margin-left:50px;
+        background-color: transparent;
+  }
+
+     textarea{
+        width:400px;
+        height: 50px;
+        padding: 9px, 20px, 9px, 20px;
+        border-radius: 6px;
+        border: 1.5px;
+        gap: 8px;
+        border: 1.5px solid #9C9C9C;
+        margin-top: -10px;
+        margin-left:50px;
+        background-color: transparent;
+  }
+
+
+    .form-group input::placeholder {
+       color: #9C9C9C;
+        font-size: 22px;
+        font-weight: 500px;
+        line-height: 22px;
+        letter-spacing: 0.25px;
+        text-align: left;
+        font-family: cursive;
+  }
+
+</style>
+
+<div class="navbar">
+    <h3 class="logo" onclick="document.location='mainPage'">Kroha.by</h3>
+    <div class ="nav">
+        <a onclick="document.location='mainPage'">Главная</a>
+        <a onclick="document.location='aboutMe'">Обо мне</a>
+        <a onclick="document.location='stages'">Этапы работы</a>
+        <a onclick="document.location='portfolio'">Мои работы</a>
+        <a onclick="document.location='order'">Как заказать</a>
+    </div>
+</div>
+
+<div class="line"></div>
+
+<div class="form">
+
+    <form action="#" th:action="@{/create}" th:object="${product}" method="post" style="width:350px">
+        <div class="form-group">
+            <label><b>Фото</b></label>
+            <input type="text" placeholder="Загрузи фото" name="photo" th:field="*{photo}">
+
+            <label><b>Наименование</b></label>
+            <input type="text" placeholder="Введи название" name="title" th:field="*{title}">
+
+            <label><b>Описание</b></label>
+            <input type="text" placeholder="Введи описание товара" name="description" th:field="*{description}">
+
+            <label><b>Цена</b></label>
+            <input type="text" placeholder="Введи цену" name="cost" th:field="*{cost}">
+
+            <button class ="button" type="submit">Сохранить</button>
+
+        </div>
+    </form>
+
+
+<div class="footer">
+    <a href="https://www.instagram.com/kroha.by/">
+        <img class="inst" src="/images/inst.png" alt="inst">
+    </a>
+</div>
+<h3 class="logoFooter">Kroha.by</h3>
+
+</body>
+

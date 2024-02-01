@@ -19,7 +19,7 @@ public class ProductController {
     @GetMapping("/create")
     public String getCreateForm(Model model) {
         List<ProductDto> products = productService.getAll();
-        return "productAd";
+        return "productAdd";
     }
 
     @PostMapping("/create")
