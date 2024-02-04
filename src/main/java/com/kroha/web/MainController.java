@@ -11,6 +11,7 @@ import java.security.Principal;
 @Controller
 @RequiredArgsConstructor
 public class MainController {
+    // сюда надо добавить продукт сервис
 
     @GetMapping("/mainPage")
     public String mainPage(Principal principal, Model model) {
@@ -23,6 +24,8 @@ public class MainController {
     }
     @GetMapping("/portfolio")
     public String portfolio(Principal principal, Model model) {
+        // а тут надо с помощью продукт сервиса взять лист продуктов
+        // и положить этот лист в model как в веселе, model.addAttribute("products", products)
         return "portfolio";
     }
     @GetMapping("/stages")

@@ -8,24 +8,22 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
-import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
 public class ProductController {
     private final ProductService productService;
-    private final ProductDto productDto;
 
     @GetMapping("/create")
     public String getCreateForm(Model model) {
-        List<ProductDto> products = productService.getAll();
         return "productAdd";
     }
 
     @PostMapping("/create")
-    public String createProducts(@ModelAttribute ProductDto product, Principal principal) {
-        ProductDto createdProduct = ProductService.create(product, principal.getName());
-        return "redirect:/portfolio/" + createdProduct.getId();
+    public String createProducts(@ModelAttribute ProductDto product) {
+        ProductDto createdProduct = productService.create(product);
+        return "redirect:/portfolio" + createdProduct.getId();
+
     }
 
     @PostMapping("/{id}")

@@ -179,11 +179,12 @@ body {
         font-family: cursive;
   }
 
+
 </style>
 
 <div class="navbar">
     <h3 class="logo" onclick="document.location='mainPage'">Kroha.by</h3>
-    <div class ="nav">
+    <div class="nav">
         <a onclick="document.location='mainPage'">Главная</a>
         <a onclick="document.location='aboutMe'">Обо мне</a>
         <a onclick="document.location='stages'">Этапы работы</a>
@@ -196,24 +197,26 @@ body {
 
 <div class="form">
 
-    <form action="#" th:action="@{/create}" th:object="${product}" method="post" style="width:350px">
-        <div class="form-group">
-            <label><b>Фото</b></label>
-            <input type="text" placeholder="Загрузи фото" name="photo" th:field="*{photo}">
+    <form action="#" th:action="@{/create}" th:object="${product}" method="post" style="width:350px"
+          enctype="multipart/form-data">
+        <label><b>Фото</b></label>
 
-            <label><b>Наименование</b></label>
-            <input type="text" placeholder="Введи название" name="title" th:field="*{title}">
+        <input type="file" placeholder="Загрузи фото" name="photo" th:field="*{photo}">
 
-            <label><b>Описание</b></label>
-            <input type="text" placeholder="Введи описание товара" name="description" th:field="*{description}">
+        <label><b>Наименование</b></label>
+        <input type="text" placeholder="Введи название" name="title" th:field="*{title}">
 
-            <label><b>Цена</b></label>
-            <input type="text" placeholder="Введи цену" name="cost" th:field="*{cost}">
+        <label><b>Описание</b></label>
+        <input type="text" placeholder="Введи описание товара" name="description" th:field="*{description}">
 
-            <button class ="button" type="submit">Сохранить</button>
+        <label><b>Цена</b></label>
+        <input type="text" placeholder="Введи цену" name="cost" th:field="*{cost}">
 
-        </div>
+        <button class="button" type="submit">Сохранить</button>
     </form>
+
+</div>
+
 
 
 <div class="footer">

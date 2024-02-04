@@ -14,5 +14,5 @@ public class ProductDto {
     private String title;
     private String description;
     private Integer cost;
-    private Byte photo;
+    private Byte[] photo;
 }

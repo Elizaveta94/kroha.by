@@ -10,7 +10,7 @@ import java.util.List;
 public interface ProductMapper {
     ProductDto mapToDto(ProductEntity source);
 
-    ProductEntity mapToEntity(ProductDto productDto, ProductEntity productEntity);
+    ProductEntity mapToEntity(ProductDto productDto);
 
     List<ProductDto> mapToDto(List<ProductEntity> source);
 }

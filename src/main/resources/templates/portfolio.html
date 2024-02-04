@@ -114,7 +114,13 @@ body {
 
 <h1 class="text-big">Мои работы</h1>
 
-
+<div>
+    <img th:src="@{${product.photo}}" alt="Photo" width="200">
+</div>
+   <h2 th:text="${product.title}"></h2>
+   <p th:text="${product.description}"></p>
+   <p th:text="${product.cost}"></p>
+   <button class="button" type="submit">Заказать</button>
 
 <div class="footer">
     <a href="https://www.instagram.com/kroha.by/">

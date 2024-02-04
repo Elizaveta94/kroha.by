@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ProductService {
 
-    ProductDto create(ProductDto productDto, Long id);
+    ProductDto create(ProductDto productDto);
 
     void delete(Long id);
 
