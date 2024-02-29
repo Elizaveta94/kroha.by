@@ -1,4 +1,5 @@
 package com.kroha.persist.entity;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,10 +12,11 @@ import java.util.Objects;
 @Getter
 @NoArgsConstructor
 @Table(name = "kroha_product")
-@SequenceGenerator(name = "kroha_product_id_seq", sequenceName = "kroha_product_id_seq", allocationSize = 1, initialValue = 1)
-
 public class ProductEntity {
+
     @Id
+    @SequenceGenerator(name = "krohaProductIdGen", sequenceName = "kroha_product_id_seq", allocationSize = 1, initialValue = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "krohaProductIdGen")
     private Long id;
     private String title;
     private String description;

@@ -16,19 +16,26 @@ public class ProductController {
 
     @GetMapping("/create")
     public String getCreateForm(Model model) {
+        model.addAttribute("product", new ProductDto());
         return "productAdd";
     }
 
     @PostMapping("/create")
     public String createProducts(@ModelAttribute ProductDto product) {
         ProductDto createdProduct = productService.create(product);
-        return "redirect:/portfolio" + createdProduct.getId();
+        return "redirect:/portfolio";
 
     }
 
-    @PostMapping("/{id}")
+    @PostMapping("product/{id}")
     public String deleteProduct(@PathVariable("id") Long id, Principal principal) {
         productService.delete(id);
         return "redirect:/portfolio/";
+    }
+
+    @GetMapping("/photo/{id}")
+    @ResponseBody
+    public byte[] getPhoto(@PathVariable("id") Long id) {
+        return productService.getPhoto(id);
     }
 }

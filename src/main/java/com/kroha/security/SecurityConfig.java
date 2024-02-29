@@ -28,13 +28,13 @@ public class SecurityConfig {
         return http
                 .csrf().disable()
                 .authorizeRequests(authorize -> authorize
-                        .antMatchers("/aboutMe", "/confirmation", "/mainPage", "/order", "/portfolio", "/stages", "/images/*.jpg", "/images/*.png").permitAll()
+                        .antMatchers("/aboutMe", "/confirmation", "/mainPage", "/order/**", "/portfolio", "/stages", "/images/*.jpg", "/images/*.png","/photo/*","/order","/submit").permitAll()
                         .anyRequest().authenticated())
                 .formLogin(formLogin -> formLogin
                         .loginPage("/ropotLogin").loginProcessingUrl("/ropotLogin")
                         .usernameParameter("login")
                         .passwordParameter("password")
-                        .defaultSuccessUrl("/mainPage", true)
+                        .defaultSuccessUrl("/create", true)
                         .permitAll())
                 .build();
     }
@@ -58,6 +58,6 @@ public class SecurityConfig {
     public WebSecurityCustomizer webSecurityCustomizer() {
         return (web) -> web.ignoring()
                 // Spring Security should completely ignore URLs starting with /resources/ , /webjars/
-                .antMatchers("/resources/", "/webjars/");
+                .antMatchers("/resources/**", "/webjars/**");
     }
 }

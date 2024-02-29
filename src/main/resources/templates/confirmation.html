@@ -1,7 +1,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Kroha</title>
+    <title>Заявка отправлена</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/webjars/bootstrap/5.2.0/css/bootstrap.min.css"/>
@@ -21,33 +21,30 @@ body {
         background-position: center;
     }
 
-    .logo {
-       width: 150px;
-       height: 30px;
-       font-family: Georgia, serif;
-       font-weight: 700;
-       text-align: center;
-       color: #192D3C;
-       font-size: 32px;
-       margin-right: auto;
-       margin-left: 80px;
-       margin-top: 20px;
+     .logo {
+        width: 10%;
+        max-width: 150px;
+        height: auto;
+        font-family: Georgia, serif;
+        font-weight: 700;
+        text-align: center;
+        color: #192D3C;
+        font-size: 1.5vw;
+        margin-right: auto;
+        margin-left: 2vw;
+        margin-top: 0.8vw;
 }
 
     .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-family: Georgia, serif;
         font-weight: 400;
-        line-height: 25px;
-        text-align: center;
+        line-height: 1.5;
         color: #000000;
-        width: 979px;
-        height: 27px;
-        margin-top: 20px;
-        font-size: 20px;
-        margin-right: auto;
-        margin-left: 300px;
-        margin-top: 20px;
-
+        font-size: 1.2vw;
+        margin-right: 6vw;
 }
 
     .navbar a:hover {
@@ -55,23 +52,28 @@ body {
 }
 
     .line {
-        width: 1920px;
-        margin-top: 25px;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 1.3vw;
         border: 1px solid #000000;
 }
-    .footer{
-        width: 1920px;
-        height: 110px;
-        margin-top: 195px;
+    .footer {
+        width: 100%;
+        max-width: 100%;
+        height: 5.4vw;
+        margin-top: 7.8vw;
         background: #E2D2C6;
-        background-size: contain;
-
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 2vw;
 }
-    .inst{
-        width: 35px;
-        height: 35px;
-        margin-left: 1700px;
-        margin-top: 42px;
+    .inst {
+        width: 2vw;
+        max-width: 35px;
+        height: auto;
+        margin-left: auto;
+        margin-top: 1.5vw;
 }
     .logoFooter {
        font-family: Georgia, serif;
@@ -88,133 +90,129 @@ body {
     }
 
     .form{
-       box-shadow: 0px 20px 50px 0px #4A2A1226;
-       box-shadow: 0px 5px 10px 0px #4A2A1214;
+       box-shadow: 0px 2vw 5vw 0px #4A2A1226;
        background: #FFFDFB99;
-       width: 500px;
-       height: 480px;
-       margin-top: 30px;
-       margin-left: 150px;
-       border-radius: 50px;
-
+       width: 25vw;
+       height: 27vw;
+       margin-top: 0.7vw;
+       margin-left: 8vw;
+       border-radius: 3vw;
 }
 
     .button {
-        margin-top: 20px;
+        margin-top: 0vw;
         margin-right: auto;
-        margin-left: 100px;
+        margin-left: 5vw;
         background-color: #5E9E91;
         color: #000000;
         border: none;
-        font-size: 20px;
+        font-size: 1.2vw;
         font-family: Georgia, serif;
         cursor: pointer;
-        width: 300px;
-        height: 50px;
-        padding: 0 25px;
+        width: 15vw;
+        height: 3vw;
+        padding: 0 2vw;
         border-radius: 50px;
-        box-shadow: -6px -6px 12px 0px #51311973 inset, 6px 6px 8px 0px #3D8778 inset;
+        box-shadow: -0.6vw -0.6vw 1.2vw 0px #51311973 inset, 0.6vw 0.6vw 0.8vw 0px #3D8778 inset;
 }
 
+
     .text-big {
-        width: 800px;
-        height: 55px;
+        width: 50vw;
+        height: 5.5vw;
         font-family: cursive;
         margin-right: auto;
-        margin-left: 80px;
-        margin-top: 60px;
-        color:  #4A2A12;
-        font-size: 48px;
+        margin-left: 8vw;
+        margin-top: 1vw;
+        color: #4A2A12;
+        font-size: 3vw;
 }
 
     label {
-        font-size: 20px;
-        color:  #000000;
-        width: 500px;
-        height: 22px;
+        font-size: 1vw;
+        color: #000000;
+        width: 50vw;
+        height: 2.2vw;
         font-family: Georgia, serif;
-        margin-top: 10px;
-        margin-left:50px;
-  }
+        margin-top: 1vw;
+        margin-left: 3vw;
+}
 
     .form-group {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
 
-  }
+}
 
      input{
-        width:400px;
-        height: 50px;
-        padding: 9px, 20px, 9px, 20px;
-        border-radius: 6px;
-        border: 1.5px;
-        gap: 8px;
+        width: 20vw;
+        height: 2.5vw;
+        padding: 0.8vw 2vw;
+        border-radius: 7px;
         border: 1.5px solid #9C9C9C;
-        margin-top: 10px;
-        margin-left:50px;
+        margin-top: 0vw;
+        margin-left: 2.5vw;
         background-color: transparent;
-  }
+}
 
      textarea{
-        width:400px;
-        height: 50px;
-        padding: 9px, 20px, 9px, 20px;
-        border-radius: 6px;
-        border: 1.5px;
-        gap: 8px;
+        width: 20vw;
+        height: 2.5vw;
+        padding: 0.8vw 2vw;
+        border-radius: 7px;
         border: 1.5px solid #9C9C9C;
-        margin-top: -10px;
-        margin-left:50px;
+        margin-top: -1vw;
+        margin-left: 2.5vw;
         background-color: transparent;
-  }
+}
+
     .text-small{
         font-family: cursive;
-        font-size: 24px;
+        font-size: 1.2vw;
         font-weight: 400;
-        line-height: 32px;
+        line-height: 3.2vw;
         letter-spacing: 0em;
         text-align: left;
-        color:  #000000;
-        width: 500px;
-        height: 146px;
-        margin-top: -450px;
-        margin-left: 1250px;
-        gap: 50px;
-  }
+        color: #000000;
+        width: 40vw;
+        height: 14.6vw;
+        margin-top: -25vw;
+        margin-left: 50vw;
+}
+
     .container{
-        margin-top: 500px;
+        margin-top: 300px;
         margin-left: 1250px;
   }
 
-  .direct{
-        width: 35px;
-        height: 35px;
-        margin-left: 1340px;
-        margin-top: -100px;
+    .direct{
+       width: 2vw;
+       height: 2vw;
+       margin-left: 54vw;
+       margin-top: -12vw;
 }
     .form-group input::placeholder {
        color: #9C9C9C;
-        font-size: 22px;
-        font-weight: 500px;
-        line-height: 22px;
-        letter-spacing: 0.25px;
-        text-align: left;
-        font-family: cursive;
-  }
+       font-size: 1vw;
+       font-weight: 500;
+       line-height: 2.2vw;
+       letter-spacing: 0.25px;
+       text-align: left;
+       font-family: cursive;
+}
 
 </style>
 </style>
 
 <div class="navbar">
-    <h3 class="logo" onclick="document.location='mainPage'">Kroha.by</h3>
+    <a style="text-decoration:none; color: #192D3C;" th:href="@{'/mainPage'}"><h3 class="logo">Kroha.by</h3></a>
     <div class ="nav">
-        <a onclick="document.location='mainPage'">Главная</a>
-        <a onclick="document.location='aboutMe'">Обо мне</a>
-        <a onclick="document.location='stages'">Этапы работы</a>
-        <a onclick="document.location='portfolio'">Мои работы</a>
-        <a onclick="document.location='order'">Как заказать</a>
+        <a style="text-decoration:none; color: #192D3C;" th:href="@{'/mainPage'}">Главная</a>
+        <a style="text-decoration:none; color: #192D3C;" th:href="@{'/aboutMe'}">Обо мне</a>
+        <a style="text-decoration:none; color: #192D3C;" th:href="@{'/stages'}">Этапы работы</a>
+        <a style="text-decoration:none; color: #192D3C;" th:href="@{'/portfolio'}">Мои работы</a>
+        <a style="text-decoration:none; color: #192D3C;" th:href="@{'/order'}">Как заказать</a>
     </div>
 </div>
 

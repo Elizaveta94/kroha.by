@@ -1,7 +1,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Обо мне</title>
+    <title>Создание</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/webjars/bootstrap/5.2.0/css/bootstrap.min.css"/>
@@ -13,13 +13,12 @@
 <style>
 
 body {
-     background: #FFF7F1 no-repeat;
-       -moz-background-size: cover;
-       -webkit-background-size: cover;
-       -o-background-size: cover;
-       background-attachment: fixed;
-       background-size: contain;
-}
+        background: url('/images/order.jpg') no-repeat;
+        background-size: contain;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
 
     .logo {
        width: 150px;
@@ -72,7 +71,7 @@ body {
     .footer{
         width: 1920px;
         height: 110px;
-        margin-top: 1200px;
+        margin-top: 7px;
         background: #E2D2C6;
 
 }
@@ -101,7 +100,7 @@ body {
        box-shadow: 0px 5px 10px 0px #4A2A1214;
        background: #FFFDFB99;
        width: 500px;
-       height: 400px;
+       height: 600px;
        margin-top: 100px;
        margin-left: 700px;
        border-radius: 50px;
@@ -183,13 +182,13 @@ body {
 </style>
 
 <div class="navbar">
-    <h3 class="logo" onclick="document.location='mainPage'">Kroha.by</h3>
-    <div class="nav">
-        <a onclick="document.location='mainPage'">Главная</a>
-        <a onclick="document.location='aboutMe'">Обо мне</a>
-        <a onclick="document.location='stages'">Этапы работы</a>
-        <a onclick="document.location='portfolio'">Мои работы</a>
-        <a onclick="document.location='order'">Как заказать</a>
+    <a style="text-decoration:none; color: #192D3C;" th:href="@{'/mainPage'}"><h3 class="logo">Kroha.by</h3></a>
+    <div class ="nav">
+        <a style="text-decoration:none; color: #192D3C;" th:href="@{'/mainPage'}">Главная</a>
+        <a style="text-decoration:none; color: #192D3C;" th:href="@{'/aboutMe'}">Обо мне</a>
+        <a style="text-decoration:none; color: #192D3C;" th:href="@{'/stages'}">Этапы работы</a>
+        <a style="text-decoration:none; color: #192D3C;" th:href="@{'/portfolio'}">Мои работы</a>
+        <a style="text-decoration:none; color: #192D3C;" th:href="@{'/order'}">Как заказать</a>
     </div>
 </div>
 

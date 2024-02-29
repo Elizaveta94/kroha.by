@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.web.multipart.MultipartFile;
 
 @Data
 @Builder
@@ -14,5 +15,6 @@ public class ProductDto {
     private String title;
     private String description;
     private Integer cost;
-    private Byte[] photo;
+    private MultipartFile photo;
+    private byte[] photoSrc;
 }

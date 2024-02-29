@@ -6,6 +6,10 @@ import com.kroha.persist.repository.ProductRepository;
 import com.kroha.service.ProductService;
 import com.kroha.service.mapper.ProductMapper;
 import lombok.RequiredArgsConstructor;
+import lombok.SneakyThrows;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -19,8 +23,9 @@ public class ProductServiceImpl implements ProductService {
 
     private ProductEntity productEntity;
 
-
+    public static final int PAGE_SIZE = 16;
     @Override
+    @SneakyThrows
     @Transactional
     public ProductDto create(ProductDto productDto) {
         productEntity = productMapper.mapToEntity(productDto);
@@ -41,5 +46,15 @@ public class ProductServiceImpl implements ProductService {
     public List<ProductDto> getAll() {
         List<ProductEntity> productEntities = productRepository.findAll();
         return productMapper.mapToDto(productEntities);
+    }
+
+    @Override
+    public byte[] getPhoto(Long id) {
+        return productRepository.findById(id).get().getPhoto();
+    }
+
+    @Override
+    public ProductDto getById(Long id) {
+        return productMapper.mapToDto(productRepository.findById(id).get());
     }
 }
