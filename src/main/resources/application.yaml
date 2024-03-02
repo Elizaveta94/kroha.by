@@ -11,9 +11,9 @@ spring:
         physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
     show-sql: true
   datasource:
-    password: postgrespw
-    username: postgres
-    url: jdbc:postgresql://localhost:49153/krohabd
+    password: krohapw
+    username: velesplatf_kroha
+    url: jdbc:mysql://localhost:3306/velesplatf_kroha
   mail:
     host: smtp.gmail.com
     port: 587
