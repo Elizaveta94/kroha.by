@@ -13,7 +13,7 @@ spring:
   datasource:
     password: postgrespw
     username: postgres
-    url: jdbc:postgresql://localhost:49153/krohabd
+    url: jdbc:postgresql://localhost:31067/krohabd
   mail:
     host: smtp.gmail.com
     port: 587
