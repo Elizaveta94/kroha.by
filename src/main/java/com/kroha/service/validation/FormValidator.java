@@ -19,9 +19,9 @@ public class FormValidator {
             throw new ValidationException("Имя не введено");
         }
 
-        //if (!name.matches("[a-zA-Zа-яА-Я]+")) {
-         //  throw new ValidationException("Имя содержит недопустимые символы");
-       // }
+        if (!name.matches("[a-zA-Zа-яА-Я]+(\\s[a-zA-Zа-яА-Я]+)?")) {
+           throw new ValidationException("Имя содержит недопустимые символы");
+        }
     }
 
     private void validatePhoneNumber(String phoneNumber) {
