@@ -25,15 +25,16 @@ public class FormValidator {
     }
 
     private void validatePhoneNumber(String phoneNumber) {
-        if (!phoneNumber.startsWith("375") && phoneNumber.length() != 12) {
-            throw new ValidationException("Номер должен начинаться с 375(25/29/33/44/55/99)XXXXXXX");
+        //if (!phoneNumber.startsWith("375") && phoneNumber.length() != 12) {
+          if (!phoneNumber.matches("375(25|29|33|44|55|99)\\d{7}")){
+        throw new ValidationException("Номер должен начинаться с 375(25/29/33/44/55/99)XXXXXXX");
         }
 
-        String operatorCode = phoneNumber.substring(3, 5);
-        if (!operatorCode.equals("25") && !operatorCode.equals("29") && !operatorCode.equals("33") &&
-                !operatorCode.equals("44") && !operatorCode.equals("55") && !operatorCode.equals("99")) {
-            throw new ValidationException("Номер должен начинаться с 375(25/29/33/44/55/99)XXXXXXX");
-        }
+       // String operatorCode = phoneNumber.substring(3, 5);
+       // if (!operatorCode.equals("25") && !operatorCode.equals("29") && !operatorCode.equals("33") &&
+          //      !operatorCode.equals("44") && !operatorCode.equals("55") && !operatorCode.equals("99")) {
+          //  throw new ValidationException("Номер должен начинаться с 375(25/29/33/44/55/99)XXXXXXX");
+        //}
     }
 }
 
