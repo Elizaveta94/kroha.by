@@ -5,5 +5,5 @@ CREATE TABLE kroha_product (
     title VARCHAR(255) NOT NULL,
     description VARCHAR(255) NOT NULL,
     cost VARCHAR(255) NOT NULL,
-    photo OID
+    photo BYTEA
 );
