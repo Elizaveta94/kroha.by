@@ -5,5 +5,5 @@ CREATE TABLE kroha_product (
     title VARCHAR(255) NOT NULL,
     description VARCHAR(255) NOT NULL,
     cost VARCHAR(255) NOT NULL,
-   photo BYTEA CHECK (octet_length(photo) <= 3145728)
+    photo BYTEA 
 );
