@@ -19,7 +19,7 @@ public class FormValidator {
             throw new ValidationException("Имя не введено");
         }
 
-        if (!name.matches("^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$")) {
+        if (!name.matches("[А-Яа-яA-Za-z]+(\\s[А-Яа-яA-Za-z]+)?")) {
            throw new ValidationException("Имя содержит недопустимые символы");
         }
     }
