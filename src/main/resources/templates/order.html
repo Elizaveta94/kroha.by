@@ -204,6 +204,15 @@ body {
        text-align: left;
        font-family: cursive;
 }
+    label::agreement {
+       color: #9C9C9C;
+       font-size: 0.5vw;
+       font-weight: 500;
+       line-height: 2.2vw;
+       letter-spacing: 0.25px;
+       text-align: left;
+       font-family: cursive;
+}
 
 </style>
 <body>
@@ -232,6 +241,7 @@ body {
             <label for="additionalInfo">Дополнительная информация</label><br>
             <textarea th:unless="${additionalInfo==null}" id="additionalInfo" name="additionalInfo" readonly th:text="${additionalInfo}" th:value="${additionalInfo}"></textarea>
             <textarea th:unless="${additionalInfo!=null}" id="additionalInfo" name="additionalInfo"></textarea><br>
+            <label for="agreement">Нажимая отправить,Вы подтверждаете свое согласие на обработку персональных данных.</label>
             <button class ="button" type="submit">Отправить</button>
         </div>
     </form>
